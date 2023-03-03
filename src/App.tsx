@@ -22,7 +22,8 @@ function App() {
             .catch((err) => setError(err));
     }, []);
     return (
-        <div className="App">
+        <div className="app">
+            <h1 className='h1'>IOTA</h1>
             {items.length > 0 ? items.map<any>((item: ItemInterface) => <Item item={item} />) : <Loader />}
         </div>
     );
