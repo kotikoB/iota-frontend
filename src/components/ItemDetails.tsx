@@ -3,27 +3,48 @@ import Loader from './Loader';
 import CnEvent from './CnEvent';
 
 const ItemDetails: React.FC = () => {
-    const [items, setItems] = useState([]);
+    const [isSending, setIsSending] = useState(false);
+    const [events, setEvents] = useState([]);
     const [error, setError] = useState([]);
 
     interface ItemDetailInterface {
         id: number;
-        name: string;
+        currentLocation: string;
     }
 
     useEffect(() => {
-        fetch('http://localhost:3030/items')
+        if (isSending) return;
+        setIsSending(true);
+
+        let itemId = 3;
+
+        fetch(`http://localhost:3030/items/${itemId}`)
             .then((response) => response.json())
-            .then((res) => setItems(res))
+            .then((res) => setEvents(res))
             .catch((err) => setError(err));
+
+        setIsSending(false);
     }, []);
 
     return (
         <div>
             <h1 className="h1">IOTA - Events</h1>
-            <CnEvent />
+            {isSending ? <Loader /> : <CnEvent />}
         </div>
     );
 };
 
 export default ItemDetails;
+
+// [
+//     {
+//         "currentLocation": "Nyaribari-Chache",
+//         "item": {
+//             "name": "Pili",
+//             "price": 13,
+//             "color": "green",
+//             "id": 2
+//         },
+//         "id": 1
+//     }
+// ]
