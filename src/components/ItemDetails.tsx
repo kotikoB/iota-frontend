@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Loader from './Loader';
-import CnEvent from './Event';
+import CnEvent from './CnEvent';
 
 const ItemDetails: React.FC = () => {
     const [items, setItems] = useState([]);
