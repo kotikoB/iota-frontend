@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Home: React.FC = () => {
     const [items, setItems] = useState([]);
     const [error, setError] = useState([]);
-    const navigate = useNavigate();
+
     interface ItemInterface {
         id: number;
         name: string;
@@ -21,15 +21,11 @@ const Home: React.FC = () => {
             .catch((err) => setError(err));
     }, []);
 
-    function handleClick() {
-        navigate('/item-details');
-    }
-
     return (
         <div>
             <h1 className="h1">IOTA</h1>
             {items.length > 0 ? (
-                items.map<any>((item: ItemInterface) => <Item item={item} onClick={handleClick} />)
+                items.map<any>((item: ItemInterface) => <Item item={item} itemId={item.id} />)
             ) : (
                 <Loader />
             )}
