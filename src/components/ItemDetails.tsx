@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Loader from './Loader';
-import Item from './Item';
+import CnEvent from './Event';
 
 const ItemDetails: React.FC = () => {
     const [items, setItems] = useState([]);
     const [error, setError] = useState([]);
 
-    interface ItemInterface {
+    interface ItemDetailInterface {
         id: number;
         name: string;
-        price: number;
-        color: string;
     }
 
     useEffect(() => {
@@ -22,12 +20,8 @@ const ItemDetails: React.FC = () => {
 
     return (
         <div>
-            <h1 className="h1">IOTA</h1>
-            {items.length > 0 ? (
-                items.map<any>((item: ItemInterface) => <Item item={item} onClick={() => console.log('clicked')} />)
-            ) : (
-                <Loader />
-            )}
+            <h1 className="h1">IOTA - Events</h1>
+            <CnEvent />
         </div>
     );
 };
