@@ -35,16 +35,3 @@ const ItemDetails: React.FC = () => {
 };
 
 export default ItemDetails;
-
-// [
-//     {
-//         "currentLocation": "Nyaribari-Chache",
-//         "item": {
-//             "name": "Pili",
-//             "price": 13,
-//             "color": "green",
-//             "id": 2
-//         },
-//         "id": 1
-//     }
-// ]
