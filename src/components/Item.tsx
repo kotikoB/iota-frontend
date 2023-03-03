@@ -3,6 +3,7 @@ import { ItemType } from '../types/Item.types';
 
 interface Props {
     item: ItemType;
+    onClick: () => void;
 }
 
 const Item: React.FC<Props> = ({ item }) => {

@@ -1,24 +1,26 @@
-body::-webkit-scrollbar{
+body::-webkit-scrollbar {
     display: none;
 }
 
-.h1{color: white;}
+.h1 {
+    color: white;
+}
 
 .app {
     background: #152d3d;
     padding: 30px;
     height: 100vh;
-  }
-  
-  .items {
+}
+
+.items {
     display: flex;
     flex-direction: column;
     background: #d18686;
     border-radius: 4px;
     padding: 5px;
-  }
-  
-  .item {
+}
+
+.item {
     align-items: center;
     background: #fff;
     border-radius: 3px;
@@ -30,4 +32,4 @@ body::-webkit-scrollbar{
     padding: 13px 10px;
     font-size: 22px;
     font-weight: bold;
-  }
+}
