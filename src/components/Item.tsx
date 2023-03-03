@@ -11,12 +11,14 @@ const Item: React.FC<Props> = ({ item }) => {
     const navigate = useNavigate();
 
     function handleClick() {
-  
-      navigate('/target-route');
+        navigate('/item-details');
     }
 
-
-    return <div className="item">{item.name}</div>;
+    return (
+        <div className="item" onClick={handleClick}>
+            {item.name}
+        </div>
+    );
 };
 
 export default Item;

@@ -5,17 +5,16 @@ import Loader from './components/Loader';
 import Item from './components/Item';
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
+import ItemDetails from './components/ItemDetails';
 
 function App() {
-
-
     return (
         <div className="app">
-      <Routes>
-        <Route path="/" element={<Home />} />
-        {/* <Route path="about" element={<About />} /> */}
-      </Routes>
-    </div>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="about" element={<ItemDetails />} />
+            </Routes>
+        </div>
     );
 }
 
