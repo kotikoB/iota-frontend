@@ -10,7 +10,7 @@ interface Props {
 const Item: React.FC<Props> = ({ item }) => {
     const navigate = useNavigate();
     function handleClick() {
-        navigate('/item-details');
+        navigate('/item-details', { state: { item } });
     }
 
     return (

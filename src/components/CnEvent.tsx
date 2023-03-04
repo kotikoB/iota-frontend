@@ -4,10 +4,10 @@ import { ItemType } from '../types/Item.types';
 interface Props {
     item: ItemType;
     id?: number;
-    currentLocation:string
+    currentLocation: string;
 }
 
-const CnEvent: React.FC<Props> = ({item, currentLocation}) => {
+const CnEvent: React.FC<Props> = ({ item, currentLocation }) => {
     return <div className="item">{`Item - ${item.name}, Current location - ${currentLocation}`}</div>;
 };
 

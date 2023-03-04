@@ -15,7 +15,7 @@ const Home: React.FC = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:3030/items') 
+        fetch('http://localhost:3030/items')
             .then((response) => response.json())
             .then((res) => setItems(res))
             .catch((err) => setError(err));
