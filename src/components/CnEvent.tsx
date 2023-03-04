@@ -8,7 +8,7 @@ interface Props {
 }
 
 const CnEvent: React.FC<Props> = ({ item, currentLocation }) => {
-    return <div className="item">{`Item - ${item.name}, Current location - ${currentLocation}`}</div>;
+    return <div className="item">{`Item - ${item.name}` }</div>;
 };
 
 export default CnEvent;
