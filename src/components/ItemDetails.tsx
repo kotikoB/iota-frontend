@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Loader from './Loader';
 import CnEvent from './CnEvent';
 import { ItemType } from '../types/Item.types';
-import { verify } from 'crypto';
 
 const ItemDetails: React.FC = () => {
     const [isSending, setIsSending] = useState(false);
